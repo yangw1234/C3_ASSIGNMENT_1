@@ -1,0 +1,3 @@
+/Users/wangyang/Documents/cloud_computing/mp1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/wangyang/Documents/cloud_computing/mp1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/wangyang/Documents/cloud_computing/mp1/cmake-build-debug/CMakeFiles/mp1.dir
