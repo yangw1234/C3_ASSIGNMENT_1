@@ -19,7 +19,7 @@
  * Macros
  */
 #define TREMOVE 20
-#define TFAIL 5
+#define TFAIL 10
 
 /*
  * Note: You can change/add any functions in MP1Node.{h,cpp}
@@ -69,9 +69,10 @@ public:
 	int finishUpThisNode();
 	void nodeLoop();
 	void checkMessages();
-    bool addOrUpdate(Address *addr);
-	bool hasMember(Address *joinaddr, bool setHeartbeat);
-    void broadcast(MessageHdr *msg, int msgsize);
+    bool addOrUpdate(Address *addr, long heartbeat);
+	bool hasMember(Address *joinaddr, long heartbeat);
+    vector<MemberListEntry> * checkMembership();
+    void gossipMembership(vector<MemberListEntry> *l);
 	int getId(Address *joinaddr);
     Address getAddress(int address, short port);
 	short getPort(Address *addr);
