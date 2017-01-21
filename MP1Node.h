@@ -18,8 +18,8 @@
 /**
  * Macros
  */
-#define TREMOVE 20
-#define TFAIL 10
+#define TREMOVE 25
+#define TFAIL 8
 
 /*
  * Note: You can change/add any functions in MP1Node.{h,cpp}

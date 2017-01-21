@@ -357,9 +357,12 @@ void MP1Node::gossipMembership(vector<MemberListEntry> *l) {
 
     vector<MemberListEntry> list = *l;
     vector<MemberListEntry>::iterator iter = list.begin();
-    unsigned seed = 0;
+    unsigned seed = par->getcurrtime();
     std::shuffle(l->begin(), l->end(), std::default_random_engine(seed));
-    int count = list.size();
+    int count = 2;
+    if (list.size() < 2) {
+        count = 1;
+    }
     while(iter != list.end()) {
         if (iter->heartbeat >= 0) {
             long hear = iter->heartbeat;
